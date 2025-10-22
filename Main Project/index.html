@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الشيف الذكي - اكتشف وصفاتك المفضلة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-utensils"></i>
+        <h1>الشيف الذكي</h1>
+      </div>
+      <p class="tagline">حوّل مكوناتك إلى وصفات استثنائية بذكاء اصطناعي</p>
+    </header>
+
+    <!-- Search Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="ingredients-tab">
+        <i class="fas fa-search"></i>
+        البحث بالمكونات
+      </button>
+      <button class="tab-btn" data-tab="recipe-tab">
+        <i class="fas fa-book"></i>
+        البحث باسم الوصفة
+      </button>
+    </div>
+
+    <!-- Ingredients Search Tab -->
+    <div id="ingredients-tab" class="tab-content active">
+      <div class="input-group">
+        <label for="ingredients">
+          <i class="fas fa-list-ul"></i>
+          ما المكونات المتوفرة لديك؟
+        </label>
+        <textarea 
+          id="ingredients" 
+          placeholder="اكتب المكونات المتوفرة لديك مفصولة بفواصل... 
+مثال: طماطم، بصل، دجاج، أرز"
+        ></textarea>
+        <div class="examples">
+          <span>أمثلة سريعة:</span>
+          <button class="example-chip" data-ingredients="لحم, أرز, جميد">المنسف</button>
+          <button class="example-chip" data-ingredients="دجاج, باذنجان, أرز">المقلوبة</button>
+          <button class="example-chip" data-ingredients="عدس, أرز, بصل">المجدرة</button>
+        </div>
+      </div>
+      <button id="generateBtn" class="primary-btn">
+        <i class="fas fa-magic"></i>
+        ابحث عن وصفة مناسبة
+      </button>
+    </div>
+
+    <!-- Recipe Name Search Tab -->
+    <div id="recipe-tab" class="tab-content">
+      <div class="input-group">
+        <label for="recipe-input">
+          <i class="fas fa-search"></i>
+          ابحث عن وصفة معينة
+        </label>
+        <input 
+          type="text" 
+          id="recipe-input" 
+          placeholder="اكتب اسم الوصفة التي تبحث عنها..."
+        >
+        <div class="popular-recipes">
+          <span>الوصفات الشائعة:</span>
+          <button class="recipe-chip" data-recipe="المنسف">المنسف</button>
+          <button class="recipe-chip" data-recipe="المقلوبة">المقلوبة</button>
+          <button class="recipe-chip" data-recipe="المسخن">المسخن</button>
+          <button class="recipe-chip" data-recipe="التبولة">التبولة</button>
+        </div>
+      </div>
+      <button id="search-btn" class="primary-btn">
+        <i class="fas fa-search"></i>
+        ابحث عن الوصفة
+      </button>
+    </div>
+
+    <!-- Results Section -->
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>جاري البحث في قاعدة الوصفات...</p>
+    </div>
+
+    <div id="result" class="result-box hidden"></div>
+    <div id="results" class="result-box hidden"></div>
+
+    <!-- Features Section -->
+    <div class="features">
+      <div class="feature-card">
+        <i class="fas fa-brain"></i>
+        <h3>ذكاء اصطناعي</h3>
+        <p>يحلل مكوناتك ويقترح أفضل الوصفات</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-utensil-spoon"></i>
+        <h3>وصفات عربية</h3>
+        <p>أكثر من 20 وصفة عربية أصلية</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clock"></i>
+        <h3>سريع وسهل</h3>
+        <p>احصل على النتائج في ثوانٍ</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025                Smart shif ai</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
